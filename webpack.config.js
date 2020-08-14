@@ -1,13 +1,8 @@
-module.exports = {
-  entry: './frontend/src/index.js',
-  output: {
-    filename: 'main.js',
-    path: __dirname + '/frontend/static/frontend'
-  },
+module.exports = {  
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"

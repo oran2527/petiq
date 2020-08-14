@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('react-app'),
-);
+class App extends Component {
+  render() {
+    return (
+        <h1>Hola Orlando</h1>
+    )
+  }      
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));
