@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'petiqContainer.apps.PetiqcontainerConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
