@@ -14,8 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path, include
+from django.conf.urls import url
+from petiqrContainer import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(r'petiq/admin/', admin.site.urls),
+    path(r'petiq/countries', views.CountriesAPIView.as_view(), name='petiq-countries-list'),
+    path(r'petiq/states', views.StatesAPIView.as_view(), name='petiq-states-list'),
+    path(r'petiq/cities', views.CitiesAPIView.as_view(), name='petiq-cities-list'),
+    path(r'petiq/owners', views.OwnersAPIView.as_view(), name='petiq-owners-list'),     
 ]
