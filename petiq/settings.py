@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'petiqContainer.apps.PetiqcontainerConfig',
     'rest_framework',
     'corsheaders',
+    'frontend'
 ]
 
 MIDDLEWARE = [
